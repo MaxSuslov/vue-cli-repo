@@ -18,11 +18,23 @@ module.exports = {
     'arrow-parens': ['error', 'as-needed'],
     'max-len': ['error', { code: 150 }],
     'no-self-import': 'off',
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        mjs: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+        vue: 'never',
+      },
+    ],
   },
   settings: {
     'import/resolver': {
       node: {
-        moduleDirectory: ['front-end/node_modules', './'],
+        moduleDirectory: ['./node_modules', './'],
       },
     },
   },
